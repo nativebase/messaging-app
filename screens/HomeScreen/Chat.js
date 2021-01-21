@@ -6,7 +6,6 @@ import { ScrollView } from 'react-native';
 
 import { CHAT_USER } from "./dummyData/chatUser";
 
-
 export default function Index() {
     const [userName, setUserName] = useState('')
     const [isOpen, setIsOpen] = useState(false);
@@ -33,7 +32,9 @@ export default function Index() {
                             <TouchableOpacity
                                 onPress={() => handleUserChatClick()}
                             >
-                                <HStack >
+                                <HStack
+                                    alignItems={"center"}
+                                >
                                     < Avatar
                                         source={{
                                             uri: user.uri,
