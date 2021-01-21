@@ -1,22 +1,23 @@
 import React from 'react';
 import { ScrollView } from 'react-native';
-import { Box, HStack, Icon, Text, Input, Avatar, AvatarBadge } from "native-base";
+import { Box, HStack, Icon, Text, Input, Avatar, AvatarBadge, VStack } from "native-base";
 
 import { MEMBER } from "./dummyData/member";
 
 export default function Header() {
     return (
 
-        <Box
+        <VStack
             flex={1}
             bg={'bg.100'}
             pt={10}
             pl={5}
             pr={5}
-            pb={5}
+            pb={8}
             borderRadius={20}
+            justifyContent={"space-between"}
         >
-            <HStack justifyContent={'space-between'} mb={7}>
+            <HStack justifyContent={'space-between'} mb={4}>
                 <HStack alignItems={'center'}>
                     <Box borderColor={'bg.100'} justifyContent={'center'}
                         alignItems={'center'}
@@ -51,42 +52,39 @@ export default function Header() {
                             size={6}
                         />
                     </Box>
-
-
                 }
                 placeholder="Search Friend"
                 borderColor={'white'}
                 backgroundColor={'white'}
-                mb={7}
+                mb={4}
             />
-            <Text fontSize={18} color={'white'} mb={2}>Pinned Contact</Text>
-
-            <ScrollView horizontal={true} >
-                <Icon
-                    type="Ionicons"
-                    name="add-circle-sharp"
-                    color={'white'}
-                    size={12}
-                />
-                {
-                    MEMBER.map((item, idx) => (
-                        <Avatar
-                            key={idx}
-                            name={item.name}
-                            source={{
-                                uri: item.uri,
-                            }}
-                            size={'md'}
-
-
-                        >
-                            {item.badge && (
-                                item.status === "online" ? <AvatarBadge bg={'green.500'} /> : <AvatarBadge bg={'red.500'} />
-                            )}
-                        </Avatar>
-                    ))
-                }
-            </ScrollView>
-        </Box >
+            <VStack>
+                <Text fontSize={18} color={'white'} mb={2}>Pinned Contact</Text>
+                <ScrollView horizontal={true} >
+                    <Icon
+                        type="Ionicons"
+                        name="add-circle-sharp"
+                        color={'white'}
+                        size={12}
+                    />
+                    {
+                        MEMBER.map((item, idx) => (
+                            <Avatar
+                                key={idx}
+                                name={item.name}
+                                source={{
+                                    uri: item.uri,
+                                }}
+                                size={'md'}
+                            >
+                                {item.badge && (
+                                    item.status === "online" ? <AvatarBadge bg={'green.500'} /> : <AvatarBadge bg={'red.500'} />
+                                )}
+                            </Avatar>
+                        ))
+                    }
+                </ScrollView>
+            </VStack>
+        </VStack >
     );
 }

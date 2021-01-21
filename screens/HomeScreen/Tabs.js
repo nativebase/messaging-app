@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Box, HStack } from "native-base";
+import { TouchableOpacity } from "react-native";
 
 const TABS = [
     {
@@ -23,20 +24,22 @@ export default function Tabs() {
         <HStack justifyContent={'space-evenly'} mb={5}>
             {
                 TABS.map((tab, idx) => (
-                    <Box
+                    <TouchableOpacity
                         key={idx}
-                        onTouchStart={() => handleTab(tab.name)}
-                        w={100} h={50}
-                        bg={activeTab.toLowerCase() == tab.name.toLowerCase() ? 'bg.100' : 'bg.300'}
-                        color={activeTab.toLowerCase() == tab.name.toLowerCase() ? 'white' : 'black'}
-                        borderRadius={25} justifyContent={"center"}
-                        alignItems={"center"} fontSize={16}
+                        onPress={() => handleTab(tab.name)}
                     >
-                        {tab.name}
-                    </Box>
+                        <Box
+                            w={100} h={50}
+                            bg={activeTab.toLowerCase() == tab.name.toLowerCase() ? 'bg.100' : 'bg.300'}
+                            color={activeTab.toLowerCase() == tab.name.toLowerCase() ? 'white' : 'black'}
+                            borderRadius={25} justifyContent={"center"}
+                            alignItems={"center"} fontSize={16}
+                        >
+                            {tab.name}
+                        </Box>
+                    </TouchableOpacity>
                 ))
             }
         </HStack>
-
     );
 }
