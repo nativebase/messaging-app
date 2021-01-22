@@ -22,7 +22,7 @@ export default function ChatLeft({ chat }) {
             alignItems={'flex-end'}
           >
             <Box
-              bg={'bg.500'}
+              bg={'bg.chatLeftColor'}
               pl={5}
               pr={7}
               pt={4}
@@ -45,7 +45,7 @@ export default function ChatLeft({ chat }) {
             justifyContent={'flex-start'}
           >
             <Box
-              bg={'bg.500'}
+              bg={'bg.chatLeftColor'}
               pl={5}
               pr={7}
               pt={4}
@@ -59,7 +59,7 @@ export default function ChatLeft({ chat }) {
                 <Box
                   w={6}
                   h={6}
-                  bg={'bg.100'}
+                  bg={'bg.header'}
                   borderRadius={30}
                   justifyContent={'center'}
                   alignItems={'center'}
@@ -69,8 +69,8 @@ export default function ChatLeft({ chat }) {
               </Box>
               <Box w={'85%'} justifyContent={'center'}>
                 <Slider defaultValue={45} colorScheme='red.200'>
-                  <SliderTrack bg='bg.600'>
-                    <SliderFilledTrack bg='bg.700' />
+                  <SliderTrack bg='bg.chatRightColor'>
+                    <SliderFilledTrack bg='bg.sliderFilledColor' />
                   </SliderTrack>
                   <SliderThumb />
                 </Slider>

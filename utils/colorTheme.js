@@ -1,12 +1,10 @@
 export const newColorTheme = {
   bg: {
-    100: '#005A86',
-    200: '#DFF3FF',
-    300: '#CBDEEB',
-    400: '#DFF3FF',
-    500: '#F2F2F2',
-    600: '#008DD6',
-    700: '#60BFED',
-    800: '#61C0EE',
+    header: '#005A86',
+    tabColor: '#CBDEEB',
+    inputBoxShade: '#DFF3FF',
+    chatLeftColor: '#F2F2F2',
+    chatRightColor: '#008DD6',
+    sliderFilledColor: '#60BFED',
   },
 };

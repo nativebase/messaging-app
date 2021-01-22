@@ -19,7 +19,7 @@ export default function ChatRight({ chat }) {
           <HStack w={'85%'} justifyContent={'flex-end'} alignItems={'flex-end'}>
             <Text fontSize={10}>6:30 AM</Text>
             <Box
-              bg={'bg.600'}
+              bg={'bg.chatRightColor'}
               pl={7}
               pr={5}
               pt={4}
@@ -39,7 +39,7 @@ export default function ChatRight({ chat }) {
           <HStack w={'85%'} alignItems={'flex-end'} justifyContent={'flex-end'}>
             <Text fontSize={10}>6:30 AM</Text>
             <Box
-              bg={'bg.600'}
+              bg={'bg.chatRightColor'}
               pl={7}
               pr={5}
               pt={4}
@@ -58,13 +58,18 @@ export default function ChatRight({ chat }) {
                   justifyContent={'center'}
                   alignItems={'center'}
                 >
-                  <Icon type='Ionicons' name='play' color={'bg.100'} size={4} />
+                  <Icon
+                    type='Ionicons'
+                    name='play'
+                    color={'bg.header'}
+                    size={4}
+                  />
                 </Box>
               </Box>
               <Box w={'85%'} justifyContent={'center'}>
-                <Slider defaultValue={0} colorScheme='bg.200'>
+                <Slider defaultValue={0}>
                   <SliderTrack>
-                    <SliderFilledTrack bg='bg.800' />
+                    <SliderFilledTrack bg='bg.sliderFilledColor' />
                   </SliderTrack>
                   <SliderThumb />
                 </Slider>

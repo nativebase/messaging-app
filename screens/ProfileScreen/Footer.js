@@ -41,8 +41,8 @@ export default function Footer() {
             </Box>
           }
           placeholder='Type your message...'
-          borderColor={'bg.400'}
-          backgroundColor={'bg.400'}
+          borderColor={'bg.inputBoxShade'}
+          backgroundColor={'bg.inputBoxShade'}
         />
         <Box
           w={9}
