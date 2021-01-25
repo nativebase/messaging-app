@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { TouchableOpacity } from 'react-native';
 
 import {
-  Box,
   HStack,
   VStack,
   Avatar,
@@ -15,11 +14,26 @@ import { ScrollView } from 'react-native';
 
 import { CHAT_USER } from './dummyData/chatUser';
 
+interface User {
+  id: number,
+  name: string,
+  uri:string,
+  messageColor: string,
+  lastMessage: string,
+  status: string,
+  time: string,
+  unreadMessage: number,
+  showIcon: boolean,
+  iconName: string,
+  iconColor: string,
+  iconType:string
+}
+
 export default function Index() {
   const [userName, setUserName] = useState('');
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleUserRightMenuClick = (userName) => {
+  const handleUserRightMenuClick = (userName:string) => {
     setUserName(userName);
     setIsOpen(true);
   };
@@ -31,7 +45,7 @@ export default function Index() {
 
   return (
     <ScrollView>
-      {CHAT_USER.map((user, idx) => (
+      {CHAT_USER.map((user:User, idx:number) => (
         <VStack pt={4} pb={4} key={idx}>
           <HStack pl={5} alignItems={'center'} justifyContent={'space-between'}>
             <TouchableOpacity onPress={() => handleUserChatClick()}>
@@ -111,7 +125,7 @@ export default function Index() {
                   <Text fontSize={14} pb={1}>
                     {user.time}
                   </Text>
-                  {user.unreadMessage > 0 ? (
+                  {/* {user.unreadMessage  && (
                     <Box
                       w={5}
                       height={5}
@@ -121,9 +135,9 @@ export default function Index() {
                       alignItems={'center'}
                       color={'white'}
                     >
-                      {user.unreadMessage}
+                      {"id"}
                     </Box>
-                  ) : null}
+                  ) } */}
                 </VStack>
                 <TouchableOpacity
                   onPress={() => handleUserRightMenuClick(user.name)}

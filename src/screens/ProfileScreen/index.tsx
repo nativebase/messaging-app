@@ -8,7 +8,7 @@ import Content from './Content';
 
 export default function Index() {
   return (
-    <SafeAreaView flex={1}>
+    <SafeAreaView style={{flex:1}}>
       <Box flex={1} p={3} pt={5} bg={'white'}>
         <Box flex={1} bg={'white'} borderRadius={20} shadow={5}>
           <Header />
