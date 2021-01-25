@@ -3,19 +3,17 @@ import { SafeAreaView } from 'react-native';
 import { Box } from 'native-base';
 
 import Header from './Header';
-import Tabs from './Tabs';
-import Chat from './Chat';
+import Footer from './Footer';
+import Content from './Content';
 
 export default function Index() {
   return (
-    <SafeAreaView flex={1}>
+    <SafeAreaView style={{flex:1}}>
       <Box flex={1} p={3} pt={5} bg={'white'}>
-        <Box flex={1} bg={'white'} shadow={3} borderRadius={20}>
+        <Box flex={1} bg={'white'} borderRadius={20} shadow={5}>
           <Header />
-          <Box flex={2} bg={'white'} pt={5} borderRadius={20}>
-            <Tabs />
-            <Chat />
-          </Box>
+          <Content />
+          <Footer />
         </Box>
       </Box>
     </SafeAreaView>
