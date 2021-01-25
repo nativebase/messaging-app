@@ -29,8 +29,8 @@ export default function Tabs() {
             h={50}
             bg={
               activeTab.toLowerCase() == tab.name.toLowerCase()
-                ? 'bg.header'
-                : 'bg.tabColor'
+                ? 'blue.400'
+                : 'blue.100'
             }
             color={
               activeTab.toLowerCase() == tab.name.toLowerCase()

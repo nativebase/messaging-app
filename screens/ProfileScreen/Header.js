@@ -3,7 +3,7 @@ import { Box, HStack, Icon, Text, Avatar } from 'native-base';
 
 export default function Header() {
   return (
-    <Box flex={1.4} bg={'bg.header'} borderRadius={20}>
+    <Box flex={1.4} bg={'blue.400'} borderRadius={20}>
       <HStack
         pl={5}
         pr={5}

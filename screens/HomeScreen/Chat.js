@@ -85,7 +85,7 @@ export default function Index() {
                   pl={3}
                   pr={2}
                   color='white'
-                  bg='bg.header'
+                  bg='blue.400'
                   borderLeftRadius={35}
                   justifyContent={'space-between'}
                   alignItems={'center'}
@@ -131,7 +131,7 @@ export default function Index() {
                   <Icon
                     type='Entypo'
                     name='dots-two-vertical'
-                    color={'bg.tabColor'}
+                    color={'blue.100'}
                     size={6}
                   />
                 </TouchableOpacity>
