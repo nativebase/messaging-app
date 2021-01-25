@@ -17,7 +17,7 @@ export default function Header() {
   return (
     <VStack
       flex={1}
-      bg={'bg.100'}
+      bg={'blue.400'}
       pt={10}
       pl={5}
       pr={5}
@@ -28,7 +28,7 @@ export default function Header() {
       <HStack justifyContent={'space-between'} mb={4}>
         <HStack alignItems={'center'}>
           <Box
-            borderColor={'bg.100'}
+            borderColor={'blue.400'}
             justifyContent={'center'}
             alignItems={'center'}
             h={8}
@@ -40,7 +40,7 @@ export default function Header() {
             <Icon
               type='FontAwesome'
               name='telegram'
-              color={'bg.100'}
+              color={'blue.400'}
               size={6}
             />
           </Box>
