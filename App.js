@@ -1,8 +1,8 @@
 import React from 'react';
 import { extendTheme, NativeBaseProvider } from 'native-base';
 
-import HomeScreen from './src/screens/HomeScreen';
-import ProfileScreen from './src/screens/ProfileScreen';
+import HomeScreen from './screens/HomeScreen';
+import ProfileScreen from './screens/ProfileScreen';
 
 import { newColorTheme } from './utils/colorTheme';
 

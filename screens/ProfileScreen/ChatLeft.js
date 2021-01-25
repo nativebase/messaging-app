@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Box,
   HStack,
@@ -10,13 +11,10 @@ import {
   SliderThumb,
 } from 'native-base';
 
-interface Props {
-  chat:string
-}
-export default function ChatLeft(props:Props) {
+export default function ChatLeft({ chat }) {
   return (
     <>
-      {props.chat === 'text' ? (
+      {chat === 'text' ? (
         <Box alignItems={'flex-start'} mb={5}>
           <HStack
             w={'85%'}
@@ -85,3 +83,6 @@ export default function ChatLeft(props:Props) {
     </>
   );
 }
+ChatLeft.propTypes = {
+  chat: PropTypes.string,
+};

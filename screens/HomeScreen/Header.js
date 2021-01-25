@@ -13,13 +13,6 @@ import {
 
 import { MEMBER } from './dummyData/member';
 
-interface Member {
-  name: string,
-  uri: string,
-  badge: boolean,
-  status: string,
-}
-
 export default function Header() {
   return (
     <VStack
@@ -83,7 +76,7 @@ export default function Header() {
             color={'white'}
             size={12}
           />
-          {MEMBER.map((item:Member, idx:number) => (
+          {MEMBER.map((item, idx) => (
             <Avatar
               key={idx}
               name={item.name}

@@ -14,23 +14,19 @@ const TABS = [
   },
 ];
 
-interface Tab {
-  name:string
-}
-
 export default function Tabs() {
   const [activeTab, setActiveTab] = useState('recent');
 
-  const handleTab = (value:string) => {
+  const handleTab = (value) => {
     setActiveTab(value);
   };
   return (
     <HStack justifyContent={'space-evenly'} mb={5}>
-      {TABS.map((tab:Tab, idx:number) => (
+      {TABS.map((tab, idx) => (
         <TouchableOpacity key={idx} onPress={() => handleTab(tab.name)}>
           <Box
-            width={100}
-            height={50}
+            w={100}
+            h={50}
             bg={
               activeTab.toLowerCase() == tab.name.toLowerCase()
                 ? 'blue.400'

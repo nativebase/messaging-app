@@ -8,7 +8,7 @@ import Chat from './Chat';
 
 export default function Index() {
   return (
-    <SafeAreaView style={{flex:1}}>
+    <SafeAreaView flex={1}>
       <Box flex={1} p={3} pt={5} bg={'white'}>
         <Box flex={1} bg={'white'} shadow={3} borderRadius={20}>
           <Header />
